@@ -1,0 +1,27 @@
+source 'https://rubygems.org'
+
+gem 'rails',	    '5.1.4' 
+gem 'execjs'                #Gem for execuitng JS from Ruby code
+gem 'therubyracer'          #Provides JS runtime for Ruby code
+gem 'puma',	    '3.9.1' #HTTP 1.1 server for Ruby/Rack applications
+gem 'sass-rails',   '5.0.6' #Sass adapter for the Rails asset pipepline
+gem 'uglifier',     '3.2.0' #Used to minifie Javascript files
+gem 'coffee-rails', '>= 3.2.2' #CoffeScript adapter
+gem 'jquery-rails', '4.3.1' #jQuery 1, 2, 3 for rails
+gem 'turbolinks',   '5.0.1' #Faster navigation for page, single-page-like, server side
+gem 'jbuilder',     '2.7.0' #DSL for Declaring JSON structures
+
+group :development, :test do
+  gem 'sqlite3', '1.3.13' # Module for Ruby interface with SQLite3 db engine
+  gem 'byebug',   '9.0.6', platform: :mri #Ruby debugger, note: implemented using Tracepoint and Debug Insceptor C API
+#mri - Ruby MRI reference implementation of Ruby
+end
+
+group :development do
+  gem 'web-console', '3.5.1' #create interactive Ruby session in browser
+  gem 'listen',      '3.1.5' #listens for changes in files and notifies about it
+  gem 'spring',	     '2.0.2' #App Preloader, keeps app run in background, so there is no need to boot everytime
+  gem 'spring-watcher-listen', '2.0.1' #Makes spring use listen gem
+end
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] #TZinfo provides daylight savings aware trainsformation between times in different timezones
