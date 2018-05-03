@@ -24,4 +24,8 @@ group :development do
   gem 'spring-watcher-listen', '2.0.1' #Makes spring use listen gem
 end
 
+group :production do
+  gem 'pg', '0.20.0'
+end
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] #TZinfo provides daylight savings aware trainsformation between times in different timezones
